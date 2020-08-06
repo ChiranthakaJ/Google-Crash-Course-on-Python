@@ -21,7 +21,7 @@ hours, minutes, remaining_seconds = convert_seconds(5000) #In here we assign the
 
 print(hours, minutes, remaining_seconds) 
 
-#Similar to above assign statement, you can use the standard method like the below.
+#Similar to the above assign statement, you can use the standard assign method like the below.
 
 hours = convert_seconds(5000)
 minutes = convert_seconds(5000)
