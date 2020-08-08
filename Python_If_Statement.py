@@ -14,3 +14,23 @@ def hint_username(username):
         print("Valid username.")
 
 hint_username("ChiranthakaJ")
+
+#Exercise 03 - The is_positive function should return True if the number received is positive and False if it isn't.
+
+def is_positive_v2(number):
+    if number > 0:
+        return True
+    else:
+        return False
+    
+print(is_positive_v2(15))
+
+#Exercise 04 - Else is not always required and you can return the value for else without the else part.
+
+def is_even(number):
+    if number % 2 == 0: 
+        return True
+    return False
+
+print(is_even(10))
+    
