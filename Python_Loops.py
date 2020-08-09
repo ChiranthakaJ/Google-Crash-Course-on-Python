@@ -10,9 +10,21 @@ print("x=" + str(x))
 
 def attempts(n): 
     x = 1
-    while x <= n: 
+    while x <= n:  
         print("Attempt " + str(x))
         x += 1
     print("Done")
     
-attempts(5)
+attempts(5) 
+
+
+#Exercise 03
+
+def count_down(start_number):
+    current = 3
+    while (current > 0):
+        print(current)
+        current -= 1
+    print("Zero!")
+
+count_down(3)
