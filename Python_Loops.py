@@ -128,3 +128,22 @@ def sum_squares(x):
 
 print(sum_squares(10)) # Should be 285
 
+
+#Exercise 10 - This for loop will display the names in the friends list and print one after another until the list ends. In other words we are iterating a list of strings and for each of the strings in the list, were printing a greeting.
+
+friends = ['Taylor', 'Alex', 'Pat', 'Eli']
+for friend in friends: 
+    print("Hi " + friend)
+
+
+#Exercise 11 - In here we are iterating a list of integers, calculate the sum and count the no of list items and then find the average using the no of items and the sum. Finaly prints them in the terminal window.
+
+values = [23, 52, 59, 37, 48]
+sum = 0
+length = 0
+
+for value in values: 
+    sum += value
+    length += 1
+    
+print("Total sum: " + str(sum) + " - Average: " + str(sum/length))
