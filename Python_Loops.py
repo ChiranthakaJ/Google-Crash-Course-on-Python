@@ -81,3 +81,50 @@ print(is_power_of_two(0)) # Should be False
 print(is_power_of_two(1)) # Should be True
 print(is_power_of_two(8)) # Should be True
 print(is_power_of_two(9)) # Should be False
+
+
+#Exercise 07 - Fill in the empty function so that it returns the sum of all the divisors of a number, without including it. A divisor is a number that divides into another without a remainder.
+
+
+
+
+
+
+#Exercise 08 - The multiplication_table function prints the results of a number passed to it multiplied by 1 through 5. An additional requirement is that the result is not to exceed 25, which is done with the break statement. Fill in the blanks to complete the function to satisfy these conditions.
+
+def multiplication_table(number):
+    	# Initialize the starting point of the multiplication table
+	multiplier = 1
+	# Only want to loop through 5
+	while multiplier <= 5:
+		result = multiplier * number 
+		# What is the additional condition to exit out of the loop?
+		if result >= 26 :
+			break
+		print(str(number) + "x" + str(multiplier) + "=" + str(result))
+		# Increment the variable for the loop
+		multiplier += 1
+
+multiplication_table(3) 
+# Should print: 3x1=3 3x2=6 3x3=9 3x4=12 3x5=15
+
+multiplication_table(5) 
+# Should print: 5x1=5 5x2=10 5x3=15 5x4=20 5x5=25
+
+multiplication_table(8)	
+# Should print: 8x1=8 8x2=16 8x3=24
+
+
+#Exercise 09 - The sum_squares function() returns the sum of all the squares of numbers between 0 and x (not included). Remember that you can use the range(x) function to generate a sequence of numbers from 0 to x (not included).
+
+def square(n):
+    return n*n
+
+def sum_squares(x):
+    sum = 0
+    for n in range(0, x):
+        sum += square(n)
+    return sum
+
+print(sum_squares(10)) # Should be 285
+
