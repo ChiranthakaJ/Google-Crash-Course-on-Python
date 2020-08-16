@@ -201,3 +201,16 @@ print(fractional_part(5, 3)) # Should be 0.66...
 print(fractional_part(5, 2)) # Should be 0.5
 print(fractional_part(5, 0)) # Should be 0
 print(fractional_part(0, 5)) # Should be 0 
+
+
+#Exercise 15 - Want to give it a go yourself? Be my guest! Modify the first_and_last function so that it returns True if the first letter of the string is the same as the last letter of the string, False if they’re different. Remember that you can access characters using message[0] or message[-1]. Be careful how you handle the empty string, which should return True since nothing is equal to nothing.
+
+def first_and_last(message):
+    if not message or message[0] == message[len(message)-1]:
+     return True
+    else:
+     return False
+
+print(first_and_last("else"))
+print(first_and_last("tree"))
+print(first_and_last(""))
