@@ -147,3 +147,86 @@ for value in values:
     length += 1
 
 print("Total sum: " + str(sum) + " - Average: " + str(sum/length))
+
+#Exercise 12 - The below examples show how to display items that are in a list.
+
+def greet_friends(friends): 
+    for friend in friends: 
+        print("Hi " + friend)
+        
+greet_friends(['Taylor','Luisa','Jamaal','Eli'])
+
+#Result: 
+    #Hi Taylor
+    #Hi Luisa
+    #Hi Jamaal
+    #Hi Eli
+    
+greet_friends("Barry")
+
+#Results: 
+    #Hi B
+    #Hi a
+    #Hi r
+    #Hi r
+    #Hi y       
+    # ===> In here 'Barry' act as a list of string. It means strings are iterable. So that the 
+    # greet_friends() will do the same computation similar to a list existed.
+    
+    
+#Exercise 13 - Make the factorial function return the factorial of n. Then, print the first 10 factorials (from 0 to 9) with the corresponding number. Remember that the factorial of a number is defined as the product of an integer and all integers before it. For example, the factorial of five (5!) is equal to 1*2*3*4*5=120. Also recall that the factorial of zero (0!) is equal to 1. 
+
+'''This example needs to fix.'''
+
+'''def factorial(n):
+    result = 1
+    for x in range(result,n):
+        result = result * n+1
+    return result
+
+for n in range(0,10):
+    print(n, factorial(n-1))'''
+ 
+ 
+#Exercise 14 - Write a script that prints the first 10 cube numbers (x**3), starting with x=1 and ending with x=10.
+ 
+for x in range(1,11):
+    print(x*x*x)
+    
+    
+#Exercise 15 - Write a script that prints the multiples of 7 between 0 and 100. Print one multiple per line and avoid printing any numbers that aren't multiples of 7. Remember that 0 is also a multiple of 7.
+
+for x in range(0,100,7):
+    x=x*1
+    print(x)
+    
+    
+#Exercise 16 - The retry function tries to execute an operation that might fail, it retries the operation for a number of attempts. Currently the code will keep executing the function even if it succeeds. Fill in the blank so the code stops trying after the operation succeeded.
+
+'''This example is correct even it gives us an error. The error is part of the answer.'''
+
+'''def retry(operation, attempts):
+    for n in range(attempts):
+     if operation():
+      print("Attempt " + str(n) + " succeeded")
+      break
+    else:
+      print("Attempt " + str(n) + " failed")
+
+retry(create_user, 3)
+retry(stop_service, 5)'''
+
+#Exercise 17 - The function sum_positive_numbers should return the sum of all positive numbers between the number n received and 1. For example, when n is 3 it should return 1+2+3=6, and when n is 5 it should return 1+2+3+4+5=15. Fill in the gaps to make this work:
+
+'''def sum_positive_numbers(n):
+    # The base case is n being smaller than 1
+    if n < 1:
+        return ___
+
+    # The recursive case is adding this number to 
+    # the sum of the numbers smaller than this one.
+    return ___ + sum_positive_numbers(___)
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15'''
+
