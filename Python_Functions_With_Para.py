@@ -63,3 +63,13 @@ print("The distance in kilometers is " + str(my_trip_km))
 print("The round-trip in kilometers is " + str(my_trip_km*2))
 
 
+#Example 03 - Modify the double_word function so that it returns the same word repeated twice, followed by the length of the new doubled word. For example, double_word("hello") should return hellohello10.
+
+def double_word(word):
+    return (word+word+str(len(word+word)))
+
+print(double_word("hello")) # Should return hellohello10
+print(double_word("abc"))   # Should return abcabc6
+print(double_word(""))      # Should return 0
+
+
