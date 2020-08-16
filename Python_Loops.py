@@ -378,3 +378,16 @@ print(even_numbers(10)) # Should be 2 4 6 8 10
 print(even_numbers(1))  # No numbers displayed
 print(even_numbers(3))  # Should be 2
 print(even_numbers(0))  # No numbers displayed
+
+
+#Exercise 28 - What is the value of x at the end of the following code?
+
+for x in range(1, 10, 3):
+    print(x)
+
+
+#Exercise 29 - What is the value of y at the end of the following code?
+
+for x in range(10):
+    for y in range(x):
+        print(y)
