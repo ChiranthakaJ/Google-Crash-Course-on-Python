@@ -58,7 +58,7 @@ print(answer.count("a"))
 print("Forest".endswith("rest"))  #===> Result is 'True'.
 
 
-#Exercise 06 - The isnumeric() method will check whether a certain string or substring is numeric. The answer is a boolean value.
+#Exercise 06 - The isnumeric() method will check whether a certain string or substring is made up with numbers. The answer is a boolean value.
 
 print("Forest".isnumeric())
 
