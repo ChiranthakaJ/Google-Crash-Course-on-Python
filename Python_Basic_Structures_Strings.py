@@ -63,5 +63,57 @@ print("Forest".endswith("rest"))  #===> Result is 'True'.
 print("Forest".isnumeric())
 
 print("123456".isnumeric())
+
+
+#Exercise 07 - The join() method will concatinate 2 or more substrings together. This does the similar operation like when we use the '+' as the concatination operator. To use the join method, we have to call it on the string that'll be used for joining. In this case, we're using a string with a space in it. The method receives a list of strings and returns one string with each of the strings joined by the initial string.
+
+print(" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"]))
+
+print("...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"]))   #This time the string is triple dots (...)
+
+
+#Exercise 08 - The split() method will split the string into a small set of substrings. 
+
+print("This is another example.".split())
     
 
+#Exercise 09 - In the initials function it returns the initials of the words contained in the phrase received, in upper case. For example: "Universal Serial Bus" should return "USB"; "local area network" should return "LAN”.
+
+def initials(phrase):
+    words = phrase.split()      #In this step the string will split to individual words and added to a list named words.
+    result = ""                 #Initializing the variable.
+    for word in words:
+        result += word[0]       #Concatinating the result variablevalue with each element in words list.     
+    return result.upper()
+
+print(initials("Universal Serial Bus")) # Should be: USB
+print(initials("local area network")) # Should be: LAN
+print(initials("Operating system")) # Should be: OS
+
+
+#Exercise 10 - Modify the student_grade function using the format method, so that it returns the phrase "X received Y% on the exam". For example, student_grade("Reed", 80) should return "Reed received 80% on the exam".
+
+def student_grade(name, grade):
+     return ("{name} received {grade}% on the exam".format(name=name, grade=grade))
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
+
+
+#Example 11 
+
+price = 7.5
+with_tax = price* 1.09
+print(price, with_tax)
+
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+
+
+#Example 12
+
+def to_celsius(x):  
+    return (x-32*5/9)
+
+for x in range(0,101,10): 
+    print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
