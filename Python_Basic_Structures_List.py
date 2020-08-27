@@ -45,8 +45,34 @@ print(type(result))   #The answer gives as a Tuple and we can get ot confirmed l
 animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
 chars = 0
 for animal in animals: 		#In this function it will go through the list for counting the no of characters of each element.
-    chars += len(animal)    #Calculate the no of characters of each element and calculate the total.
+    chars += len(animal)    #Calculate the no of characters of each element and calculate the total no of characters.
 
-print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))		#Calculate the average no of characters and print with the total no of characters. in here len(0 used to calculate the no of elements in the list.)
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))		#Calculate the average no of characters and print with the total no of characters. In here len() used to calculate the total no of elements in the list.
+
+
+#Example 09 -  Identifying the index of an element going through the list using the enumerate() function.
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners): 
+    print("{} - {}".format(index + 1, person))
+
+'''
+	1 - Ashley
+	2 - Dylan
+	3 - Reese
+'''
+
+
+#Example 10 - Try out the enumerate function for yourself in this quick exercise. Complete the skip_elements function to return every other element from the list, this time using the enumerate function to check if an element is on an even position or an odd position.
+
+def skip_elements(elements):
+    list=[]
+    for index,element in enumerate(elements):
+        if index%2==0:
+            list.append('{}'.format(element))
+    return list
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 
 
