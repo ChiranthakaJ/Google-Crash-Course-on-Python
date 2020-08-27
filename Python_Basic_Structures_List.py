@@ -35,7 +35,18 @@ def convert_seconds(seconds):
     return hours, minutes, remaining_seconds
 
 result = convert_seconds(5000)
-type(result)
-print(convert_seconds(5000))   #====> (1, 23, 20)
 
-#The answer gives as a Tuple and we can get ot confirmed like below.
+print(convert_seconds(5000))   #====> (1, 23, 20)
+print(type(result))   #The answer gives as a Tuple and we can get ot confirmed like below.
+
+
+#Example 08 - Iterating over a List.
+
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals: 		#In this function it will go through the list for counting the no of characters of each element.
+    chars += len(animal)    #Calculate the no of characters of each element and calculate the total.
+
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))		#Calculate the average no of characters and print with the total no of characters.
+
+
