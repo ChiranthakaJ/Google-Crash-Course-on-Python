@@ -47,6 +47,6 @@ chars = 0
 for animal in animals: 		#In this function it will go through the list for counting the no of characters of each element.
     chars += len(animal)    #Calculate the no of characters of each element and calculate the total.
 
-print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))		#Calculate the average no of characters and print with the total no of characters.
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))		#Calculate the average no of characters and print with the total no of characters. in here len(0 used to calculate the no of elements in the list.)
 
 
