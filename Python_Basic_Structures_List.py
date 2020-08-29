@@ -75,4 +75,26 @@ def skip_elements(elements):
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 
+#The enumerate() function returns a tuple for each element in the list. The first value of the tuple is the index of the element in the sequence. The second value in the tuple is the element in the sequence.
+
+
+#Example 11 - You have a list of tuples containing two strings each. The first string is an email and the second is the full name of the person with that email address. You need to write a function that creates a new list containing one string per person including their name abd the email address between abgled brackets.The format usually used in emails like this.
+
+#We'll start by defining a function that receives a list of people, def full_emails, takes the argument people.
+def full_emails(people):
+     
+    #Remember, people is a list of tuples where the first element is the email address and the second one is the full name.  So in our function, we'll first create the variable that we'll use as a return value which will be a list and we'll call it result. Result equals empty list.
+    result = []
+    
+    #We'll then iterate over the list of people. We know this list contains tuples of two strings each. So we'll unpack the values directly when iterating in variables that we'll call email and name for email and name in people.
+    for email, name in people: 
+        
+        #Now, our result variable is a list and it should contain strings. So we'll append to the resulting string to the results list, result.append. 
+        result.append("{} <{}>".format(name, email))
+        #The string that will append will be formatted in the way we want. To do that, we'll use the format method with the two variables of our iteration. So curly brackets, curly brackets.format, name, and email.
+    
+    #Once we're done with the iteration, we'll return the list which should now contain all the necessary emails, return result.
+    return result 
+
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
 
