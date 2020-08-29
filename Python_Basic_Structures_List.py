@@ -98,3 +98,41 @@ def full_emails(people):
 
 print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
 
+
+#You can create lists from sequences using a for loop, but there’s a more streamlined way to do this: list comprehension. List comprehensions allow you to create a new list from a sequence or a range in a single line.
+
+#For example, [ x*2 for x in range(1,11) ] is a simple list comprehension. This would iterate over the range 1 to 10, and multiply each element in the range by 2. This would result in a list of the multiples of 2, from 2 to 20.
+
+#Example 12 - List comprehensions vs generic list iterating
+
+#------ Generic List Iteration ------
+
+multiples = []
+for x in range(1,11):
+    multiples.append(x*7)
+
+print(multiples) #=====> [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+
+#------ List comprehensions used list iteration ------
+
+multiples = [ x * 7 for x in range(1,11)]
+
+print(multiples)
+
+
+#Example 13 -  List comprehensions also let us use a conditional clause. Say we wanted all the numbers that are divisible by 3 between 0 and a 100, we could create a list like the below.
+
+z = [x for x in range(1, 101) if x%3 ==0]
+print(z)        #===== [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, ........ 90, 93, 96, 99]
+
+
+#Example 14 - The odd_numbers function returns a list of odd numbers between 1 and n, inclusively. Fill in the blanks in the function, using list comprehension. Hint: remember that list and range counters start at 0 and end at the limit minus 1.
+
+def odd_numbers(n):
+    	return [x for x in range(1, n+1) if x % 2 != 0]
+
+print(odd_numbers(5))  # Should print [1, 3, 5]
+print(odd_numbers(10)) # Should print [1, 3, 5, 7, 9]
+print(odd_numbers(11)) # Should print [1, 3, 5, 7, 9, 11]
+print(odd_numbers(1))  # Should print [1]
+print(odd_numbers(-1)) # Should print []
