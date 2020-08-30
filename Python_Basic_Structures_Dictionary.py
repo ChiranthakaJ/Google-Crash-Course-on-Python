@@ -115,3 +115,18 @@ print(count_letters("My name is Chiranthaka Sampath Jayakody"))   #======> {'M':
 
 #Let's say for example that you're analyzing logs in your server and you want to count how many times each type of error appears in the log file. You could easily do this with a dictionary by using the type of error as the key and then incrementing the associated value each time you come across that error type.
 
+#When compared with list dictionary, you want to use dictionaries when you plan on searching for a specific element. 
+
+#In lists, you can store any data type. In dictionaries, we can store any data type for the values but the keys are restricted to specific types. The reasoning behind which types are allowed can get complex and we don't want to bog you down with unnecessary details. So as a rule of thumb, you can use any immutable data type; numbers, booleans, strings and tuples as dictionary keys.
+
+#On the flip side, like we said, the values associated with keys can be any type, including lists or even other dictionaries.
+
+
+#Example 08 - In Python, a dictionary can only hold a single value for a given key. To workaround this, our single value can be a list containing multiple values. Here we have a dictionary called "wardrobe" with items of clothing and their colors. Fill in the blanks to print a line for each item of clothing with each color, for example: "red shirt", "blue shirt", and so on.
+
+wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
+count = 0
+for key, value in wardrobe.items():
+	for i in value:
+		if count <3:
+			print("{} {}".format(i, key))
