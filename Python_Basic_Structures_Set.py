@@ -1,0 +1,1 @@
+#A set is used when you want to store a bunch of elements and be certain that there are only present once. Elements of a set must also be immutable. You can think of this as the keys of a dictionary with no associated values or you could see it as a list where what matters isn't the order of the elements but whether an element is in the list or not.
