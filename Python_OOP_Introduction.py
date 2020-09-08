@@ -19,7 +19,7 @@ print(dir(""))
 print(help(""))
 
 #When we use the help function on any variable or value, we're showing all the documentation for the corresponding class.
-
+ 
 #In this case, we're looking at the documentation for the str class, the class of the string object. As before, it starts with the special method. If we scroll down, we reach the ones we've already seen. 
 
 #The help() function identify that has given within the parentheses is a string with the double quotes.
