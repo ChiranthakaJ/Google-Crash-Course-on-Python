@@ -15,7 +15,7 @@ class Apple:
 #creating an instance(object) of the class. The instance name is jonagold.
 
 '''Syntax
-
+uu
 instance_name = Class_name()
 
 '''
