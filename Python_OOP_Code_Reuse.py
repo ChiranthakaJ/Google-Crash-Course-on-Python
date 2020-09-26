@@ -72,6 +72,9 @@ class Animal:
 class Piglet(Animal): 
     sound = "Oink!"
 
+hamlet = Piglet("Hamlet")
+hamlet.speak()
+
 
         
 
