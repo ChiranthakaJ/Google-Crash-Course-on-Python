@@ -75,6 +75,33 @@ class Piglet(Animal):
 hamlet = Piglet("Hamlet")
 hamlet.speak()
 
+#In this code, we've defined a general class called animal, which has an attribute to store the sound that the animal makes. The constructor of the class takes the name that will be assigned to the instance when it's created.
 
-        
+#There's also a speak method that prints the name of the animal together with the sound the animal makes. Then, we have a piglet class that inherits from the animal class. We set the value of the sound attribute to oink in the piglet class, and that's the only thing we've modified from the original. Everything else is inherited. Let's see this in action.
 
+#Let's define a new class that also inherits from animal. How about a cow class? To finish, let's create an instance of this class to make it speak.
+
+class Cow(Animal): 
+    sound = "Moooo"
+    
+Milky = Cow("Milky white")
+Milky.speak()
+
+#So you can see that we can easily define new classes that inherit from the base animal class and use both the attributes and methods that the animal class provides.
+
+#Example 04 - Let’s create a new class together and inherit from it. Below we have a base class called Clothing. Together, let’s create a second class, called Shirt, that inherits methods from the Clothing class. Fill in the blanks to make it work properly.
+
+class Clothing:
+      material = ""
+      def __init__(self,name):
+        self.name = material
+      def checkmaterial(self):
+	    print("This {} is made of {}".format(self.___,self.___))
+			
+class Shirt(___):
+  material="Cotton"
+
+polo = Shirt("Polo")
+polo.checkmaterial()
+
+#Inheritance lets you reuse code written for one class in other classes. 
