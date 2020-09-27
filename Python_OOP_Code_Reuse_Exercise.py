@@ -181,3 +181,59 @@ class LoadBalancing:
         loads = [str(server) for server in self.servers]
         return "[{}]".format(",".join(loads))
 #End Portion 2#
+
+#As with the Server class, this class is currently incomplete. You need to fill in the gaps to make it work correctly. For example, this snippet should create a connection in the load balancer, assign it to a running server and then the load should be more than zero:
+
+l = LoadBalancing()
+l.add_connection("fdca:83d2::f20d")
+print(l.avg_load())
+
+'''
+0
+'''
+
+#After running the above code, the output is 0. Fill in the missing parts for the add_connection and avg_load methods of the LoadBalancing class to make this print the right load. Be sure that the load balancer now has an average load more than 0 before proceeding.
+
+#What if we add a new server?
+
+l.servers.append(Server())
+print(l.avg_load())
+
+'''
+0
+'''
+
+#The average load should now be half of what it was before. If it's not, make sure you correctly fill in the missing gaps for the add_connection and avg_load methods so that this code works correctly.
+
+#Hint: You can iterate through the all servers in the self.servers list to get the total server load amount and then divide by the length of the self.servers list to compute the average load amount.
+
+#Fantastic! Now what about closing the connection?
+
+l.close_connection("fdca:83d2::f20d")
+print(l.avg_load())
+
+'''
+0
+'''
+
+#Fill in the code of the LoadBalancing class to make the load go back to zero once the connection is closed.
+
+#Great job! Before, we added a server manually. But we want this to happen automatically when the average load is more than 50%. To make this possible, fill in the missing code for the ensure_availability method and call it from the add_connection method after a connection has been added. You can test it with the following code:
+
+for connection in range(20):
+    l.add_connection(connection)
+print(l)
+
+'''
+[0.00%,0.00%]
+'''
+
+#The code above adds 20 new connections and then prints the loads for each server in the load balancer. If you coded correctly, new servers should have been added automatically to ensure that the average load of all servers is not more than 50%.
+
+#Run the following code to verify that the average load of the load balancer is not more than 50%.
+
+print(l.avg_load())
+
+'''
+0
+'''
