@@ -26,3 +26,13 @@ print(type(now)) #=====> <class 'datetime.datetime'>
 #If you're wondering why we have a doubled datetime, it's because the datetime module provides a datetime class, and the datetime class gives us a method called now. This now method generates an instance of the datetime class for the current time. We can operate on this instance of datetime in a bunch of ways.
 
 print(now) #=====> '2020-09-26 23:21:34.212403'
+
+#When we call print with an instance of the datetime class, we see the date printed in a specific format. Behind the scenes, the print function is calling the str method of the datetime class which formats it in the way that we see here. We can also access the instance through its attributes and methods.
+
+#For example, we can look at the individual parts of the date like the year.
+
+print(now.year)    #=====> 2020
+
+#The datetime module provides more classes than the datetime class. For example, we can use the timedelta class to calculate a date in the future or in the past. Let's try this out.
+
+print(now + datetime.timedelta(days=28))    #=====> 2020-10-24 23:30:47.208363
